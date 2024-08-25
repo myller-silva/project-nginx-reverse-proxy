@@ -1,8 +1,8 @@
-# Use a imagem base do Nginx
-FROM nginx:alpine
+# Use a imagem base do Apache HTTP Server
+FROM httpd:alpine
 
-# Copie os arquivos HTML para o diretório padrão do Nginx
-COPY . /usr/share/nginx/html
+# Copie o arquivo index.html para o diretório padrão do Apache
+COPY index.html /usr/local/apache2/htdocs/
 
 # Exponha a porta 80
 EXPOSE 80
